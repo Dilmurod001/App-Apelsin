@@ -1,0 +1,42 @@
+###
+POST http://localhost:80/api/customer
+Content-Type: application/json
+
+{
+  "name": "Samandar",
+  "country": "UZB",
+  "address": "Tashkent",
+  "phone": "990087818"
+}
+
+###
+POST http://localhost:80/api/category
+Content-Type: application/json
+
+{
+  "name": "Oziq-ovqat"
+}
+
+###
+POST http://localhost:80/api/product
+Content-Type: application/json
+
+{
+  "name": "non",
+  "description": "Norm",
+  "price": 1200,
+  "categoryId": 2
+}
+
+###
+POST http://localhost:80/api/order
+Content-Type: application/json
+
+{
+  "customerId": 2,
+  "productId": 3,
+  "quantity": 3
+}
+
+###
+GET http://localhost:80/api/customer/Ordered2021
