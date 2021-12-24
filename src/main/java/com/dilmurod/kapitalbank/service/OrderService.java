@@ -85,10 +85,13 @@ public class OrderService {
     }
 
     public ApiResponse getOrdersWithoutDetails() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
-        String format = dateFormat.format(date);
         List<?> ordersWithoutDetails = orderRepository.getOrdersWithoutDetails(date);
         return new ApiResponse("Success", true, ordersWithoutDetails);
+    }
+
+    public ApiResponse getNumberOfProductsInYear() {
+        List<?> numberOfProductsInYear = orderRepository.getNumberOfProductsInYear();
+        return new ApiResponse("Success", true, numberOfProductsInYear);
     }
 }

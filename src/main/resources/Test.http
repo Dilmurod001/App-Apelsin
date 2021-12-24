@@ -40,3 +40,6 @@ Content-Type: application/json
 
 ###
 GET http://localhost:80/api/customer/Ordered2021
+
+###
+GET http://localhost:80/api/invoice

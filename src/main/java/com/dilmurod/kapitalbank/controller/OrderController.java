@@ -53,4 +53,11 @@ public class OrderController {
         return ResponseEntity.ok(apiResponse);
     }
 
+    //get total number of orders each country in 2021
+    @GetMapping("/number_of_products_in_year")
+    public HttpEntity<?> getNumberOfProducts(){
+        ApiResponse apiResponse = orderService.getNumberOfProductsInYear();
+        return ResponseEntity.ok(apiResponse);
+    }
+
 }
